@@ -16,3 +16,4 @@ NB. We can see that 28 is the first triangle number to have over five divisors.
 
 NB. What is the value of the first triangle number to have over five hundred divisors?
 
+smoutput >./+/0=(1+i.5000)|/+/\1+i.5000
