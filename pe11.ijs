@@ -31,4 +31,5 @@ horizontal =: >./ >./ "1 (4 */ \ "1 grid)
 vertical =: >./ >./ "1 (4 */ \ grid)
 diagonal =: >./,4*/\&></. grid
 backdiagonal =: >./,4*/\&></. |.grid
+smoutput ] biggest4product =: >./horizontal,vertical,diagonal,backdiagonal
 exit''
