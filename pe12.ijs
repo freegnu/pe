@@ -24,6 +24,20 @@ NB. Also runs out of memory
 NB. d =: 3 : '+/0=d|~1+i.y'
 NB. t =: 3 : '+/1+i.y'
 NB. smoutput t 1+i.5000
-NB. snoutput d t 1+i.5000
-
-smoutput 1 + # q: 28
+NB. smoutput d t 1+i.5000
+9!:33 ]1
+d =: 2&+@#@q:
+t =: +/@i.@>:
+t2 =: ({. + >:@{:) , (>:@{:)
+ts =: 6!:2 , 7!:2@]
+smoutput d 28
+smoutput t 5
+smoutput 7!:0 ''
+smoutput ts '(t2^:(19&>@d@{.)^:_:) 1 1'
+smoutput 7!:0 ''
+smoutput ts '(t2^:(21&>@d@{.)^:_:) 1 1'
+smoutput 7!:0 ''
+smoutput ts '(t2^:(23&>@d@{.)^:_:) 1 1'
+smoutput 7!:0 ''
+smoutput ts '(t2^:(25&>@d@{.)^:_:) 1 1'
+smoutput 7!:0 ''
