@@ -25,27 +25,17 @@ NB. d =: 3 : '+/0=d|~1+i.y'
 NB. t =: 3 : '+/1+i.y'
 NB. smoutput t 1+i.5000
 NB. smoutput d t 1+i.5000
-9!:33 ]1
-p =: >:@i.
-d =: 0&=@(|~ p) # p
-n =: #d
+NB. 9!:33 ]1
 t =: +/@i.@>:
 t2 =: ({. + >:@{:) , (>:@{:)
+n =: [: +/ 0&=@(|~ >:@i.)
 ts =: 6!:2 , 7!:2@]
-smoutput 7!:0 ''
-smoutput ts 'i. 250891200'
-smoutput 7!:0 ''
-smoutput ts 'p 250891200'
-smoutput 7!:0 ''
-smoutput ts 'd 250891200'
-smoutput 7!:0 ''
-smoutput ts 'n 250891200'
-smoutput 7!:0 ''
-smoutput ts 't 5'
-smoutput 7!:0 ''
-smoutput ts '(t2^:(19&>@d@{.)^:_:) 1 1'
-smoutput 7!:0 ''
-smoutput ts '(t2^:(21&>@d@{.)^:_:) 1 1'
-smoutput 7!:0 ''
-smoutput ts '(t2^:(23&>@d@{.)^:_:) 1 1'
-smoutput 7!:0 ''
+NB. smoutput 7!:0 ''
+NB. smoutput 'ts ''n 250891200'''
+NB. smoutput ts 'n 250891200'
+NB. smoutput n 250891200
+NB. smoutput 7!:0 ''
+smoutput 'ts ''(t2^:(500&>@n@{.)^:_:) 1 1'''
+NB. smoutput ts '(t2^:(500&>@n@{.)^:_:) 1 1'
+smoutput (n@{.,[)@(t2^:(500&>@n@{.)^:_:) 1 1
+NB. smoutput 7!:0 ''
