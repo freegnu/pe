@@ -8,4 +8,6 @@ NB. Although it has not been proved yet (Collatz Problem), it is thought that al
 NB. Which starting number, under one million, produces the longest chain?
 NB. NOTE: Once the chain starts the terms are allowed to go above one million.
 n =: (((1: + 3&*)@{. , >:@{:) ` (-:@{. , >:@{:) @. (0&=@|~&2@{.))^:(1&<@{.)^:_: "1
-m =: n@,.&1
+m =: _ _1 {. n@,.&1
+max =: >./@m@i.
+smoutput max 10
