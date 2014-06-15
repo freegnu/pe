@@ -5,9 +5,9 @@ If all the numbers from 1 to 1000 (one thousand) inclusive were written out in w
 
 NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
 
-ones =: 90*#'onetwothreefourfivesixseveneightnine'
+ones =: 190*#'onetwothreefourfivesixseveneightnine'
 teens =: 10*#'eleventwelvethirteenfourteenfifteensixteenseventeeneighteennineteen'
 ot =: #'onethousand'
 tens =: 100*#'twentythirtyfourtyfiftysixtyseventyeightyninety'
-huns =: (10*ones)+900*#'hundred'
+huns =: 900*#'hundredand'
 ones+teens+ot+tens+huns
