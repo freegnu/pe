@@ -9,5 +9,6 @@ ones =: 190*#'onetwothreefourfivesixseveneightnine'
 teens =: 10*#'eleventwelvethirteenfourteenfifteensixteenseventeeneighteennineteen'
 ot =: #'onethousand'
 tens =: 100*#'twentythirtyfourtyfiftysixtyseventyeightyninety'
-huns =: 900*#'hundredand'
-ones+teens+ot+tens+huns
+huns =: 900*#'hundred'
+and =: 891*#'and'
+ones+teens+ot+tens+huns+and
