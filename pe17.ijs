@@ -6,7 +6,7 @@ NB. If all the numbers from 1 to 1000 (one thousand) inclusive were written out 
 NB. NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
 
 ones =: 190*#'onetwothreefourfivesixseveneightnine'
-teens =: 10*#'eleventwelvethirteenfourteenfifteensixteenseventeeneighteennineteen'
+teens =: 10*#'teneleventwelvethirteenfourteenfifteensixteenseventeeneighteennineteen'
 ot =: #'onethousand'
 tens =: 100*#'twentythirtyfortyfiftysixtyseventyeightyninety'
 huns =: 900*#'hundred'
