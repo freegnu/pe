@@ -7,6 +7,7 @@ test =: 0 : 0
 8 5 9 3
 )
 ]test =: ". ;. _2 test
+]text_max =: 2 >./\"0 test
 
 NB. That is, 3 + 7 + 4 + 9 = 23.
 
@@ -30,4 +31,6 @@ tree =: 0 : 0
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 )
 ]tree =: ". ;. _2 tree
+]tree_max =: 2>./\"1 tree
+
 NB. NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route. However, Problem 67, is the same challenge with a triangle containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)
