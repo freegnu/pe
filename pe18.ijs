@@ -38,3 +38,4 @@ NB. NOTE: As there are only 16384 routes, it is possible to solve this problem b
 maxt =: 3 : '(maxt((<(i.1-~#y);(1+i.1-~#y)){y) >. (maxt((<(1+i.1-~#y);(1+i.1-~#y)){y)`y@.1=$y'
 maxt =: ] ` 1: @. #
 maxt =: 2: ` ([: # $) @. (2: > [: # $)
+maxt =: ] ` >./ ` ((maxt@((<(i.1-~#]);(1+i.1-~])){]) >. (maxt@((<(1+i.1-~]);(1+i.1-~#])){]))  @. (2: ` ([: # $) @. (2: > [: # $))
