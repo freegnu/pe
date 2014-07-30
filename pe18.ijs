@@ -36,11 +36,10 @@ tree =: 0 : 0
 NB. NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route. However, Problem 67, is the same challenge with a triangle containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)
 
 NB. maxt =: 3 : '(maxt((<(i.1-~#y);(1+i.1-~#y)){y) >. (maxt((<(1+i.1-~#y);(1+i.1-~#y)){y)`y@.1=$y'
-NB. maxt =: ] ` 1: @. #
-NB. maxt =: 2: ` ([: # $) @. (2: > [: # $)
-NB. maxt =: ] ` >./ ` ((maxt@((<(i.1-~#]);(1+i.1-~])){]) >. (maxt@((<(1+i.1-~]);(1+i.1-~#])){]))  @. (2: ` ([: # $) @. (2: > [: # $))
+NB. maxt =: ] ` 1: @. #
+NB. maxt =: 2: ` ([: # $) @. (2: > [: # $)
+NB. maxt =: ] ` >./ ` ((maxt@((<(i.1-~#]);(1+i.1-~])){]) >. (maxt@((<(1+i.1-~]);(1+i.1-~#])){]))  @. (2: ` ([: # $) @. (2: > [: # $))
 NB. maxt =: ] ` (>./) ` ((maxt@({~ (< @(}:@i.@# ; }.@i.@#)))) >. (maxt@({~ (< @(}.@i.@# ; }.@i.@#)))))  @. (2: ` ([: # $) @. (2: > [: # $))
 
-maxt =: 0: ` (] ` ([: >./ 2&{.) @. ([: # $)) ` (0: ` ([: >./ 2&{.) ` ([: >./ [: 2&{. 1&{) @. ([: # $)) ` ((maxt@({~ (< @(}:@i.@# ; }.@i.@#)))) >. (maxt@({~ (< @(}.@i.@# ; }.@i.@#)))))  @. (3: ` ([: #) @. (1: > [: # $))
-
+maxt =: ] ` (0: ` ] ` (((0 0)&{) , ([: >./ 2&{.) @. #)) ` (0: ` ([: >./ 2&{.) ` ([: >./ [: 2&{. 1&{) @. ([: # $)) ` ((maxt@({~ (< @(}:@i.@# ; }.@i.@#)))) >. (maxt@({~ (< @(}.@i.@# ; }.@i.@#)))))  @. ([: # $)
 
