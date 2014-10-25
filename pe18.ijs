@@ -7,7 +7,7 @@ test =: 0 : 0
 8 5 9 3
 )
 ]test =: ". ;. _2 test
-]text_max =: 2 >./\"0 test
+NB. ]text_max =: 2 >./\"1 test
 
 NB. That is, 3 + 7 + 4 + 9 = 23.
 
@@ -31,15 +31,19 @@ tree =: 0 : 0
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 )
 ]tree =: ". ;. _2 tree
-]tree_max =: 2>./\"1 tree
+NB. ]tree_max =: 2>./\"1 tree
 
-NB. NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route. However, Problem 67, is the same challenge with a triangle containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)
+NB. NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route. 
+NB. However, Problem 67, is the same challenge with a triangle containing one-hundred rows; 
+NB. it cannot be solved by brute force, and requires a clever method! ;o)
 
 NB. maxt =: 3 : '(maxt((<(i.1-~#y);(1+i.1-~#y)){y) >. (maxt((<(1+i.1-~#y);(1+i.1-~#y)){y)`y@.1=$y'
 NB. maxt =: ] ` 1: @. #
 NB. maxt =: 2: ` ([: # $) @. (2: > [: # $)
-NB. maxt =: ] ` >./ ` ((maxt@((<(i.1-~#]);(1+i.1-~])){]) >. (maxt@((<(1+i.1-~]);(1+i.1-~#])){]))  @. (2: ` ([: # $) @. (2: > [: # $))
-NB. maxt =: ] ` (>./) ` ((maxt@({~ (< @(}:@i.@# ; }.@i.@#)))) >. (maxt@({~ (< @(}.@i.@# ; }.@i.@#)))))  @. (2: ` ([: # $) @. (2: > [: # $))
+NB. maxt =: ] ` >./ ` ((maxt@((<(i.1-~#]);(1+i.1-~])){]) >. (maxt@((<(1+i.1-~]);(1+i.1-~#])){]))  @. (2: ` ([: # $) @. (2: > [: # $))
+NB. maxt =: ] ` (>./) ` ((maxt@({~ (< @(}:@i.@# ; }.@i.@#)))) >. (maxt@({~ (< @(}.@i.@# ; }.@i.@#)))))  @. (2: ` ([: # $) @. (2: > [: # $))
 
-maxt =: ] ` (0: ` ] ` (((0 0)&{) , ([: >./ 2&{.) @. #)) ` (0: ` ([: >./ 2&{.) ` ([: >./ [: 2&{. 1&{) @. ([: # $)) ` ((maxt@({~ (< @(}:@i.@# ; }.@i.@#)))) >. (maxt@({~ (< @(}.@i.@# ; }.@i.@#)))))  @. ([: # $)
+NB. maxt =: ] ` (0: ` ] ` (((0 0)&{) , ([: >./ 2&{.) @. #)) ` (0: ` ([: >./ 2&{.) ` ([: >./ [: 2&{. 1&{) @. ([: # $)) ` ((maxt@({~ (< @(}:@i.@# ; }.@i.@#)))) >. (maxt@({~ (< @(}.@i.@# ; }.@i.@#)))))  @. ([: # $)
 
+shape =: , $
+reshape =: shape
