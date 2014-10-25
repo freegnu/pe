@@ -3,3 +3,6 @@ NB. How many such routes are there through a 20×20 grid?
 ]{:t =. 1 1 &(+//.@(*/)) ^: (i.21) 1x
 [ts =. *:@{: t
 +/ts
+mpaths =: ([: ! *&2) % (! * !)
+mpaths 6
+mpaths 20x
