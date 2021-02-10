@@ -1,2 +1,2 @@
 # Project Euler #
-Project Euler in J
+Project Euler in J and Python
